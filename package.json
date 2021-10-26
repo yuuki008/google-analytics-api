@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@google-analytics/data": "^2.7.0",
     "googleapis": "^89.0.0"
   }
 }
