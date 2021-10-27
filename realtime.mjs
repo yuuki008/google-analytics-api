@@ -5,7 +5,7 @@ const json = JSON.parse(fs.readFileSync('./credential.json', 'utf8'));
 const scopes = ['https://www.googleapis.com/auth/analytics.readonly']
 const jwtClient = new google.auth.JWT(json.client_email, null, json.private_key, scopes)
 
-async function doTheThings() {
+async function main() {
   await jwtClient.authorize()
   let response = await google.analytics('v3').data.realtime.get({
     'auth': jwtClient,
@@ -15,4 +15,4 @@ async function doTheThings() {
   console.log(response.data)
 }
 
-doTheThings().catch(console.error)
+main()
