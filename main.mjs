@@ -11,8 +11,6 @@ const main = async () => {
     auth: client,
   })
 
-  analyticsreporting.reports.batchGet
-
   const res = await analyticsreporting.reports.batchGet({
     requestBody: {
       reportRequests: [
