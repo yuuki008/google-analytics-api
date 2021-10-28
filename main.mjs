@@ -16,7 +16,13 @@ const main = async () => {
       reportRequests: [
         {
           viewId: '204896850', // view id
-          metrics: [{ expression: 'sg:sessions' }],
+          dateRanges: [
+            {
+              startDate: 'today',
+              endDate: 'today',
+            },
+          ],
+          metrics: [{ expression: 'ga:sessions' }],
         },
       ],
     },
