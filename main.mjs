@@ -23,6 +23,7 @@ const main = async () => {
             },
           ],
           metrics: [{ expression: 'ga:sessions' }],
+          dimensions: [{ name:"ga:datehour" }]
         },
       ],
     },
