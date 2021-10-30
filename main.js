@@ -1,4 +1,5 @@
-import { google } from 'googleapis'
+const { google } = require('googleapis')
+require('dotenv').config()
 
 const main = async () => {
   const client = await google.auth.getClient({
@@ -15,7 +16,7 @@ const main = async () => {
     requestBody: {
       reportRequests: [
         {
-          viewId: '204896850', // view id
+          viewId: process.env.VIEWID, // view id
           dateRanges: [
             {
               startDate: 'today',

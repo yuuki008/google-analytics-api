@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "@google-analytics/data": "^2.7.0",
+    "dotenv": "^10.0.0",
     "googleapis": "^89.0.0",
     "isomorphic-fetch": "^3.0.0",
     "json-loader": "^0.5.7"

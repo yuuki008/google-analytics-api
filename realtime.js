@@ -10,7 +10,7 @@ async function main() {
   await jwtClient.authorize()
   let response = await google.analytics('v3').data.realtime.get({
     'auth': jwtClient,
-    'ids': 'ga:' + process.env.VIEWID,
+    'ids': 'ga:204896850',
     'metrics': 'rt:activeUsers'
   })
   console.log(response.data)
